@@ -11,6 +11,8 @@ import sendOtpViaSMS from "../utils/sendOtpViaSms.js";
 
 // =========== register ============
 export const register = tryCatchWrapper(async (req, res) => {
+  console.log('========== Register ==========', req.body);
+
   const { name, phone, password } = req.body;
   if (!name || !phone || !password) {
     return failedResponse(res, "Please fill up required details");

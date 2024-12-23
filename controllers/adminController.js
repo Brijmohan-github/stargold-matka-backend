@@ -14,6 +14,7 @@ import distribute from "../models/distributeModel.js";
 import slider from "../models/sliderModel.js";
 //========== adminRegister ==========
 export const adminRegister = tryCatchWrapper(async (req, res) => {
+  console.log('========== adminRegister ==========');
   const { name, password } = req.body;
   const existingUser = await user.findOne({
     isAdmin: true,
