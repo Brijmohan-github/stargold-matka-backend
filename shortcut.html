@@ -1,0 +1,37 @@
+1. Email validation function for schema
+<!-- 
+    validate: {
+      validator: function (value) {
+        return /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(value);
+      },
+      message: (props) => `${props.value} is not a valid email!`,
+    },
+ -->
+
+2. Strong password validation for schema
+<!-- 
+    validate: {
+      validator: function (value) {
+        return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/.test(
+          value
+        );
+      },
+      message: (props) =>
+        `${props.value} is not a valid password! Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character.`,
+    },
+ -->
+
+3. confirm password validation
+<!-- 
+    validate: {
+      validator: function (value) {
+        return this.password === value;
+      },
+      message: "Passwords do not match!",
+    },
+ -->
+
+4. sudo apt install unzip curl -fsSL https://bun.sh/install | bash curl -o-
+https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash nvm
+install node
+
