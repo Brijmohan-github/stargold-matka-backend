@@ -7,15 +7,15 @@ connect(process.env.DB_URI)
   .catch((err) => console.log(err.message, `\n Db Connection Failed!...`));
 
 
-  const corsOptions = {
-    origin: ['https://admin.ratankhichi.com'], // Allow multiple origins
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow specific methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
-    credentials: true, // Allow cookies or authentication headers
-    optionsSuccessStatus: 204, // For legacy browsers
-  };
+  // const corsOptions = {
+  //   origin: ['https://admin.ratankhichi.com'], // Allow multiple origins
+  //   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow specific methods
+  //   allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  //   credentials: true, // Allow cookies or authentication headers
+  //   optionsSuccessStatus: 204, // For legacy browsers
+  // };
   
-  app.use(cors(corsOptions));
+  // app.use(cors(corsOptions));
   
 // starting the server
 const PORT = process.env.PORT || 5000;

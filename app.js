@@ -15,7 +15,17 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+  origin: ['https://admin.ratankhichi.com'], // Allow multiple origins
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow specific methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  credentials: true, // Allow cookies or authentication headers
+  optionsSuccessStatus: 204, // For legacy browsers
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, "uploads")));
